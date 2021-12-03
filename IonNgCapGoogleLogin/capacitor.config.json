@@ -1,0 +1,12 @@
+{
+	"appId": "io.ionic.doubleauthetification.starter",
+	"appName": "IonNgCapGoogleLogin",
+	"webDir": "www",
+	"bundledWebRuntime": false,
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}

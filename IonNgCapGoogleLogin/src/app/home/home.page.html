@@ -1,0 +1,36 @@
+<ion-content>
+  <div class="container-lg">
+    <div class="d-flex justify-content-center">
+      <img alt="doubleAuth" class="img-fluid logo" src="../../assets/icon/doubleauth.png">
+    </div>
+    <ion-item color="transparent">
+      <ion-label position="floating" class="text-white">Nom d'utilisateur</ion-label>
+      <ion-input class="text-white" type="text" placeholder="Nom d'utilisateur" required [(ngModel)]="loginData.username"></ion-input>
+    </ion-item>
+
+    <ion-item color="transparent">
+        <ion-label position="floating" class="text-white">Mot de passe</ion-label>
+        <ion-input [type]="showPassword ? 'text' : 'password'" class="text-white" class="text-white" placeholder="Mot de passe" required [(ngModel)]="loginData.password"></ion-input>
+        <ion-icon  [name]="showPassword ? 'eye-outline' : 'eye-off-outline'" (click)="showHide()" slot="end" class="ion-align-self-center"></ion-icon>
+    </ion-item>
+
+    <ion-item color="transparent">
+      <ion-button class="text-white" slot="end" fill="clear">Mot de passe oublié ?</ion-button>
+    </ion-item>
+
+    <ion-button color="white" class="text-white" expand="block" shape="round" fill="outline" (click)="doLogin()">Connexion</ion-button>
+    <br>
+    <ion-button class="text-white" expand="block" shape="round" [routerLink]="['/registration']">Inscription</ion-button>
+  </div>
+
+<ion-item lines="none" color="transparent">
+    <ion-label class="text-white text-center" text-center>Ou connectez-vous avec</ion-label>
+  </ion-item>
+
+  <div class="d-flex justify-content-center">
+    <ion-button color="google" color="google" shape="round" (click)="doLogin()">
+      <ion-icon slot="start" name="logo-google"></ion-icon>
+      Google
+    </ion-button>
+  </div>
+</ion-content>
